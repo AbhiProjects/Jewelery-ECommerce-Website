@@ -1,0 +1,77 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="ProductMaster.master.cs" Inherits="FrontMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head runat="server">
+<meta charset="utf-8" />
+<title>MAX JEWELLERY</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+<link rel="stylesheet" href="css/product_item.css" type="text/css"/>
+<link rel="stylesheet" type="text/css" href="Images/Banner/style.css" />
+<link type="text/css" rel="stylesheet" media="all" href="item_sites/all/themes/max/stylesfbad.css?z" />
+<script type="text/javascript" src="item_sites/all/modules/colorbox/styles/default/colorbox_default_stylefbad.js?z"></script>
+<script type="text/javascript" src="Images/Banner/jquery.minfbad.js?z"></script>
+<script type="text/javascript">
+    //jQuery.noConflict();
+    /*function show_div(number)
+    {
+    $("#msg_body"+number).slideToggle(600);
+    }*/
+    $(document).ready(function () {
+        //hide the all of the element with class msg_body
+        $(".msg_body").hide();
+        //toggle the componenet with class msg_body
+        $(".msg_head").click(function () {
+            $(this).next(".msg_body").slideToggle(600);
+            $(".msg_body").hide();
+        });
+    });
+</script>
+<script type="text/javascript">
+<!--    //--><![CDATA[//><!--
+    jQuery.extend(Drupal.settings, { "basePath": "/", "colorbox": { "transition": "elastic", "speed": 350, "opacity": "0.85", "slideshow": false, "slideshowAuto": false, "slideshowSpeed": 2500, "slideshowStart": "", "slideshowStop": "", "current": "{current} of {total}", "previous": "« Prev", "next": "Next »", "close": "Close", "overlayClose": true, "maxWidth": "100%", "maxHeight": "100%" }, "cron": { "basePath": "/poormanscron", "runNext": 1372087483 }, "thickbox": { "close": "Close", "next": "Next \x3e", "prev": "\x3c Prev", "esc_key": "or Esc Key", "next_close": "Next / Close on last", "image_count": "Image !current of !total"} });
+    //--><!]]>
+</script>
+</head>
+
+<body>
+<form id="form1" runat="server">
+   
+<div class="header_warpper" id=ulHeader runat="server">
+
+
+</div>
+
+
+<div class="container2_warpper"><div id="warpper">
+<div style="font:normal 28px 'Times New Roman', Times, serif; color:#185990; padding:8px 8px 8px 8px"><i>Jewellery</i></div>
+<hr style="margin-top:-16px; margin-left:112px"></hr>
+
+<div class="item_sidebar" id=ulSidebar runat="server">
+
+</div>
+
+
+        
+<asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        
+    
+        </asp:ContentPlaceHolder>
+         
+</div></div>
+<div class="clear" style=" background-image:url(Images/Static/body.gif); border-bottom:2px solid #244962"></div>
+<div class="footer_warpper"><div id="warpper"><div id="footer">
+    <!-- ################################################################################################ -->
+    <div class="pad" id="ulfooter" runat="server">
+      <!-- ################################################################################################ -->
+
+    </div>
+    <!-- ################################################################################################ -->
+  </div></div></div>
+  </form>
+</body>
+</html>

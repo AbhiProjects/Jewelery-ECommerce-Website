@@ -1,0 +1,10 @@
+
+/* Menu */.t-rtl .t-menu .t-group .t-link{padding-left:2em;padding-right:.97em}
+.t-rtl .t-menu .t-item{border-width:0 0 0 1px}
+.t-rtl .t-menu .t-image,.t-rtl .t-menu .t-sprite{margin:0 -4px 0 4px}
+.t-rtl .t-menu .t-arrow-down{margin-left:-10px;margin-right:2px}
+.t-rtl .t-menu .t-arrow-next{right:auto;left:0}
+.t-rtl .t-menu .t-animation-container,.t-rtl .t-menu .t-group{left:auto;right:-1px}
+.t-rtl .t-menu .t-animation-container .t-animation-container,.t-rtl .t-menu .t-group .t-group{right:100%;left:auto}
+.t-rtl .t-menu-vertical .t-animation-container,.t-rtl .t-menu-vertical .t-group{right:100%;left:auto}
+.t-rtl .t-menu .t-animation-container .t-group{right:auto}

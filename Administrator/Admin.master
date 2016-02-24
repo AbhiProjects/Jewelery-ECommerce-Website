@@ -1,0 +1,348 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="Administrator_Admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Max Jewellery</title>
+ <link href="css/styles.css" rel="stylesheet" type="text/css">
+ <link href="css/style_organic.css" rel="stylesheet" type="text/css" />
+ <link type="text/css" href="css/telerik_003.css" rel="stylesheet">
+<link type="text/css" href="css/telerik_002.css" rel="stylesheet">
+<link type="text/css" href="css/telerik.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+<link rel="stylesheet" href="css/product_item.css" type="text/css"/>
+<link rel="stylesheet" type="text/css" href="Images/Banner/style.css" />
+<link type="text/css" rel="stylesheet" media="all" href="item_sites/all/themes/max/stylesfbad.css?z" />
+<script type="text/javascript" src="item_sites/all/modules/colorbox/styles/default/colorbox_default_stylefbad.js?z"></script>
+<script type="text/javascript" src="Images/Banner/jquery.minfbad.js?z"></script>
+<script src="js/ga.js" async type="text/javascript"></script>
+	<script src="js/3ixsv0nxyfzsuqcvccfqci7x1h0yghcfatmhreeomyi1.js"></script>
+    <script src="js/jquery.organictabs.js"></script>
+    
+<script type="text/javascript">
+    
+    
+        $(function () {
+
+            $("#example-one").organicTabs();
+
+            $("#example-two").organicTabs({
+                "speed": 200
+            });
+
+        });
+        function MM_jumpMenu(targ, selObj, restore) { //v3.0
+            eval(targ + ".location='" + selObj.options[selObj.selectedIndex].value + "'");
+            if (restore) selObj.selectedIndex = 0;
+        }
+    </script>
+    <script type="text/javascript">
+        //jQuery.noConflict();
+        /*function show_div(number)
+        {
+        $("#msg_body"+number).slideToggle(600);
+        }*/
+        $(document).ready(function () {
+            //hide the all of the element with class msg_body
+            $(".msg_body").hide();
+            //toggle the componenet with class msg_body
+            $(".msg_head").click(function () {
+                $(this).next(".msg_body").slideToggle(600);
+                $(".msg_body").hide();
+            });
+        });
+</script>
+<script type="text/javascript">
+<!--    //--><![CDATA[//><!--
+    jQuery.extend(Drupal.settings, { "basePath": "/", "colorbox": { "transition": "elastic", "speed": 350, "opacity": "0.85", "slideshow": false, "slideshowAuto": false, "slideshowSpeed": 2500, "slideshowStart": "", "slideshowStop": "", "current": "{current} of {total}", "previous": "« Prev", "next": "Next »", "close": "Close", "overlayClose": true, "maxWidth": "100%", "maxHeight": "100%" }, "cron": { "basePath": "/poormanscron", "runNext": 1372087483 }, "thickbox": { "close": "Close", "next": "Next \x3e", "prev": "\x3c Prev", "esc_key": "or Esc Key", "next_close": "Next / Close on last", "image_count": "Image !current of !total"} });
+    //--><!]]>
+</script>
+<style type="text/css">
+#album_layout_wrapper
+{
+	background:#FFFFFF;
+	padding:0px;
+	padding-left:0px;
+	padding-bottom:6px;
+	/*border:1px solid #ccc;
+	-moz-box-shadow:0 0px 50px rgba(0, 0, 0, 0.55);
+	-webkit-box-shadow: 0 0px 50px rgba(0, 0, 0, 0.55);
+	box-shadow:0 0px 50px rgba(0, 0, 0, 0.55);*/
+}
+#album_layout_column_main
+{
+	border:1px solid #ccc;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-left:10px;
+	margin-right:10px;
+	
+}
+#album_layout_column_tab
+{
+	border:1px solid #ccc;
+	padding-left: 3px;
+	padding-right: 3px;
+	margin-left:10px;
+	margin-right:10px;
+	
+}
+#album_layout_column_1
+{
+	width: 100%;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+#album_layout_column_2
+{
+	width: 100%;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+#album_layout_column_3
+{
+	width: 100%;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+.table-container
+{
+	width: 100%;
+	overflow-y: auto;
+	_overflow: auto;
+	margin: 0 0 0;
+}
+.table-container::-webkit-scrollbar
+{
+	-webkit-appearance: none;
+	width: 14px;
+	height: 14px;
+}
+
+.table-container::-webkit-scrollbar-thumb
+{
+	border-radius: 8px;
+	border: 3px solid #fff;
+	background-color: rgba(0, 0, 0, .3);
+}
+
+#album_layout_responsive_region .s5_float_left
+{
+	width:100% !important;
+}
+.text { font:normal 12px Arial; padding:3px 3px 3px 3px; border-right:1px solid #ccc; border-bottom:1px solid #ccc}
+.textlast { font:normal 12px Arial; padding:3px 3px 3px 3px; border-bottom:1px solid #ccc}
+.textlastbordernone { font:normal 12px Arial; padding:3px 3px 3px 3px; }
+.textrightborder { font:normal 12px Arial; padding:3px 3px 3px 3px; border-right:1px solid #ccc}
+.alternatetext { font:normal 12px Arial; padding:3px 3px 3px 3px; background-color:#f7f7f7; border-right:1px solid #ccc; }
+
+.alternatetextbottom { font:normal 12px Arial; padding:3px 3px 3px 3px; background-color:#f7f7f7; border-right:1px solid #ccc; }
+.alternatetextbottomlast { font:normal 12px Arial; padding:3px 3px 3px 3px; background-color:#f7f7f7; }
+.alternatettextlastbordernone { font:normal 12px Arial; padding:3px 3px 3px 3px; background-color:#f7f7f7; }
+.trbg { height:25px; background-image:url(tr_bg.jpg);
+ background-repeat:repeat-x}
+ .tablesubheadertext { font:bold 13px Arial; padding:5px 5px 5px 3px;}
+ .viewtext { font:bold 12px Arial; color:#09C; text-decoration:none}
+ .viewtext:hover { font:bold 12px Arial; color:#09C; text-decoration:underline}
+ .displayitemstext { font:normal 12px Arial; padding-right:10px}
+/* SECTION HEADERS */
+.section-title{border-bottom:solid 3px #dfdfdf;padding-bottom:1px;margin-bottom:10px; margin-top:25px; margin-left:10px; margin-right:10px; color:#009FFF;font-size:14px;font-weight:700;vertical-align:bottom; }
+.section-title img{vertical-align:middle;padding-bottom:2px;}
+.section-header .title a{text-decoration:none;font-size:11px;color:#555;text-transform:none; }
+.section-header{border-bottom:solid 3px #dfdfdf;padding-bottom:1px;margin-bottom:10px; margin-left:0px; margin-right:0px; height:25px; }
+.section-header .title{float:left;color:#009FFF;font-size:14px;font-weight:700;vertical-align:bottom;padding-top:5px; text-transform:capitalize;}
+.section-header .title img{vertical-align:middle;padding-bottom:2px;}
+.section-header .options{text-align:right;float:right;} 
+/* DASHBOARD */
+table.dashboard{margin-top:15px; margin-left:6px;border:solid 1px #ccc;width:100%;border-collapse:collapse;}
+table.dashboard td.maincol{padding:10px;vertical-align:top;}
+table.dashboard td.splitcol{width:50%;vertical-align:top;}
+table.dashboard td.rightcol{width:215px;background:#f3f3f3;padding:10px 5px 5px;vertical-align:top;}
+table.stats{margin-top:10px;width:100%;}
+table.stats td.orderaveragereport{width:100%;vertical-align:top;}
+table.stats td.orderstatistics{width:50%;vertical-align:top;}
+table.stats td.customerstatistics{width:50%;vertical-align:top;padding-left:5px;}
+table.stats td.bestsellers{width:50%;vertical-align:top;}
+.statisticsTitle{text-align:left;color:#333;font-weight:700;margin-bottom:5px;}
+.nop-news .newsitem{}
+.nop-news .newsitem .newstitle{}
+.nop-news .newsitem .newstitle a:hover{text-decoration:none;}
+.nop-news .newsitem .newsdate{font-size:.8em;color:#555;border-bottom:solid 1px #dfdfdf;padding-bottom:5px;margin-bottom:5px;}
+.nop-news .newsitem .newsdetails{color:#333;margin-bottom:10px;}
+.nop-news .adv{border-top:solid 3px #dfdfdf;padding:1px 0;text-align:right;}
+.nop-news .adv a{color:#D16400;}
+/* MASTER PAGE WRAPPERS */
+.master-wrapper-page{}
+.master-wrapper-content{}
+/* MASTER HEADER */
+.demo-warning{color:#FFFFFF;font-size:12px;line-height:1.25;margin:0;padding:0px 0px;text-align:center;clear:both;}
+.header{height:90px;width:100%; position:relative;}
+.header .logo{display:block;width:340px;height:90px;text-decoration:none;}
+.header .languageselector{position:absolute;right:400px;top:7px;text-align:right;}
+.header .links{position:absolute;right:10px;top:7px;text-align:right;}
+a img{border:0;}
+.header .links .separator{color:#FFF;padding:0 3px;}
+.header .login-info{position:absolute;right:5px;top:35px;text-align:right;color:#e7e7e7;font-size:10px;}
+.header .login-info .a{color:#009FFF;text-decoration:none;font-weight:700;}
+.header .version{position:absolute;right:5px;top:55px;text-align:right;color:#e7e7e7;font-size:10px;}
+/* MASTER HEADER MENU */
+.header-menu{width:100%; margin-left:0px;background:url(images/admin-menu-bg.gif) repeat-x;text-transform:capitalize;}
+.header-menu .t-menu .t-link{padding:.6em .97em;}
+.header-menu .t-menu .t-arrow-next{top:7px;}
+.logout {
+	position: absolute;
+	margin-top: -50px;
+	text-align: right;
+	float: right;
+	left: 708px;
+	top: 86px;
+	font: bold 11px Arial;
+	color: #0abef2
+}
+.logout :hover {position: absolute; font:bold 11px Arial; color:#025269; text-decoration:none}
+
+</style>
+<asp:ContentPlaceHolder runat="server" ID="head"></asp:ContentPlaceHolder>
+</head>
+
+<body>
+<form id="f1" runat="server">
+<div id="album_layout_wrapper">
+
+    <div id="album_layout_responsive_region">
+    <div style="width:100%; height:90px; background-image:url(images/adminpanel_headerbg.jpg); margin-bottom:1px">
+      <div style="padding:9px"><img src="images/admin_titlelogo.png" width="210" height="73" bordder="0" /></div></div>
+    
+  
+    <div class="header-menu">
+                    
+<ul class="t-widget t-reset t-header t-menu" id="Admin">
+   &nbsp;&nbsp;&nbsp;&nbsp;<li class="t-item t-highlighted t-state-default"><a class="t-link" href="Dashboard.aspx">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="image" class="t-image" src="icon/ico-dashboard.png">Dashboard&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+        <li style="" class="t-item t-state-default"><span class="t-link">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="image" class="t-image" src="icon/ico-catalog.png">Product Management&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-icon t-arrow-down"></span></span><div style="width: 115px; height: 120px; display: none;" class="t-animation-container">
+            <ul style="display: block; width: 113px; margin-top: -120px;" class="t-group">
+                <li style="" class="t-item t-state-default"><span class="t-link">Add<span class="t-icon t-arrow-next"></span></span><div style="width: 89px; height: 61px; display: none;" class="t-animation-container">
+                    <ul style="display: block; width: 87px; margin-left: -89px;" class="t-group">
+                        <li class="t-item t-state-default"><a class="t-link" href="AddCat.aspx">Category</a></li>
+                        <li class="t-item t-state-default"><a class="t-link" href="AddSubCat.aspx">SubCategory</a></li>
+                        <li class="t-item t-state-default"><a class="t-link" href="AddProduct.aspx">Products</a></li>
+                    </ul></div>
+                </li>
+                <li class="t-item t-state-default"><a class="t-link" href="">Edit</a><span class="t-icon t-arrow-next"></span></span><div style="width: 89px; height: 61px; display: none;" class="t-animation-container">
+                    <ul style="display: block; width: 87px; margin-left: -89px;" class="t-group">
+                        <li class="t-item t-state-default"><a class="t-link" href="EditCat.aspx">Category</a></li>
+                        <li class="t-item t-state-default"><a class="t-link" href="EditSubCat.aspx">SubCategory</a></li>
+                        <li class="t-item t-state-default"><a class="t-link" href="EditProduct.aspx">Products</a></li>
+                    </ul></div>
+                </li>
+         </ul></div>
+         </li>
+        <li class="t-item t-highlighted t-state-default"><a class="t-link" href="EditCustomer.aspx">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="image" class="t-image" src="icon/ico-customers.png">Customers&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a><div style="width: 177px; height: 267px; display: none;" class="t-animation-container">
+         </div></li>
+         
+         <li style="" class="t-item t-state-default"><span class="t-link">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="image" class="t-image" src="icon/ico-content.png">Scheme&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-icon t-arrow-down"></span></span>
+         <div style="width: 115px; height: 120px; display: none;" class="t-animation-container">
+         <ul style="display: block; width: 113px; margin-top: -120px;" class="t-group">
+         <li class="t-item t-state-default"><a class="t-link" href="AddScheme.aspx">Add</a></li>
+         <li class="t-item t-state-default"><a class="t-link" href="EditScheme.aspx">Edit</a></li>
+         
+         </ul></div>
+         </li>
+         
+         <li style="" class="t-item t-state-default"><span class="t-link">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="image" class="t-image" src="icon/ico-system.png">System&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-icon t-arrow-down"></span></span><div style="width: 157px; height: 120px; display: none;" class="t-animation-container">
+         <ul style="margin-top: -120px; display: block; width: 155px;" class="t-group"><li class="t-item t-state-default"><a class="t-link" href="Log.aspx">Log</a></li>
+         <li class="t-item t-state-default"><a class="t-link" href="BackupAndRestore.aspx">Backup And Restore</a></li>
+         <li class="t-item t-state-default"><a class="t-link" href="AddCapcha.aspx">Capcha</a></li>
+         <li class="t-item t-state-default"><a class="t-link" href="Promotions.aspx">Promotions</a></li>
+         <li class="t-item t-state-default"><a class="t-link" href="ChangePassword.aspx">Change Password</a></li>
+         </ul></div></li>
+
+         <li style="" class="t-item t-state-default"><span class="t-link">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="image" class="t-image" src="icon/ico-configuration.png">Miscellaneous&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-icon t-arrow-down"></span></span><div style="width: 120px; height: 149px; display: none;" class="t-animation-container">
+         <ul style="margin-top: -2px; display: block; width: 131px;" class="t-group">
+         <li style="" class="t-item t-state-default"><span class="t-link">Tax<span class="t-icon t-arrow-next"></span></span><div style="width: 89px; height: 61px; display: none;" class="t-animation-container">
+                <ul style="display: block; width: 87px; margin-left: -89px;" class="t-group">
+                    <li class="t-item t-state-default"><a class="t-link" href="AddTax.aspx">Add</a></li>
+                    <li class="t-item t-state-default"><a class="t-link" href="EditTax.aspx">Edit</a></li>
+                    </li>
+                    </ul>
+                    <li style="" class="t-item t-state-default"><span class="t-link">Astrologer<span class="t-icon t-arrow-next"></span></span><div style="width: 89px; height: 61px; display: none;" class="t-animation-container">
+                <ul style="display: block; width: 87px; margin-left: -89px;" class="t-group">
+                    <li class="t-item t-state-default"><a class="t-link" href="AddAstrologer.aspx">Add</a></li>
+                    <li class="t-item t-state-default"><a class="t-link" href="EditAstrologer.aspx">Edit</a></li>
+                    </li>
+                    </ul>
+                    <li style="" class="t-item t-state-default"><span class="t-link">ShowRooms<span class="t-icon t-arrow-next"></span></span><div style="width: 89px; height: 61px; display: none;" class="t-animation-container">
+                <ul style="display: block; width: 87px; margin-left: -89px;" class="t-group">
+                    <li class="t-item t-state-default"><a class="t-link" href="AddShowRooms.aspx">Add</a></li>
+                    <li class="t-item t-state-default"><a class="t-link" href="EditShowRooms.aspx">Edit</a></li>
+                    </li>
+                    </ul>
+                    <li style="" class="t-item t-state-default"><span class="t-link">Featured Products<span class="t-icon t-arrow-next"></span></span><div style="width: 89px; height: 61px; display: none;" class="t-animation-container">
+                <ul style="display: block; width: 87px; margin-left: -89px;" class="t-group">
+                    <li class="t-item t-state-default"><a class="t-link" href="AddFeaturedProducts.aspx">Add</a></li>
+                    <li class="t-item t-state-default"><a class="t-link" href="EditFeaturedProducts.aspx">Edit</a></li>
+                    </li>
+                    </ul>
+                    <li style="" class="t-item t-state-default"><span class="t-link">Best Seller<span class="t-icon t-arrow-next"></span></span><div style="width: 89px; height: 61px; display: none;" class="t-animation-container">
+                <ul style="display: block; width: 87px; margin-left: -89px;" class="t-group">
+                    <li class="t-item t-state-default"><a class="t-link" href="AddBestSeller.aspx">Add</a></li>
+                    <li class="t-item t-state-default"><a class="t-link" href="EditBestSeller.aspx">Edit</a></li>
+                    </li>
+                    </ul>
+                    <li style="" class="t-item t-state-default"><span class="t-link">Home Pages Images<span class="t-icon t-arrow-next"></span></span><div style="width: 89px; height: 61px; display: none;" class="t-animation-container">
+                <ul style="display: block; width: 87px; margin-left: -89px;" class="t-group">
+                    <li class="t-item t-state-default"><a class="t-link" href="AddImages.aspx">Add</a></li>
+                    <li class="t-item t-state-default"><a class="t-link" href="EditImages.aspx">Edit</a></li>
+                    </li>
+                    </ul>
+                    
+                    </ul>
+                    
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<li class="t-item t-highlighted t-state-default"><a class="t-link" href="Logout.aspx">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img alt="image" class="t-image" src="icon/logout_icon.gif">Logout&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a><div style="width: 177px; height: 267px; display: none;" class="t-animation-container">
+                    </div></li>
+                    </div></li>
+
+
+         </ul> 
+         </div>
+         
+                
+                
+                            <div class="status-bar" style="margin-left:0px;  ">
+                            <asp:Label ID="lblDate" runat="server"></asp:Label>
+                </div>
+            
+          <div class="item_sidebar" id=ulSidebar runat="server">
+
+</div>
+      
+
+        <asp:ContentPlaceHolder ID="c1" runat="server"></asp:ContentPlaceHolder>      
+                  
+
+    </div>
+</div>
+
+ <script type="text/javascript" src="js/telerik.js"></script>
+<script type="text/javascript" src="js/telerik_003.js"></script>
+<script type="text/javascript" src="js/telerik_004.js"></script>
+<script type="text/javascript" src="js/telerik_002.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+    jQuery(document).ready(function () {
+        jQuery('#average-order-report-grid').tGrid({ columns: [{ "title": "Order Status", "member": "OrderStatus", "type": "String" }, { "title": "Today", "member": "SumTodayOrders", "type": "String" }, { "title": "This Week", "member": "SumThisWeekOrders", "type": "String" }, { "title": "This Month", "member": "SumThisMonthOrders", "type": "String" }, { "title": "This Year", "member": "SumThisYearOrders", "type": "String" }, { "title": "All time", "member": "SumAllTimeOrders", "type": "String"}], pageSize: 0, ajax: { "selectUrl": "/Admin/Order/OrderAverageReportList?average-order-report-grid-size=0" }, noRecordsTemplate: 'No records to display.' });
+        jQuery('#incomplete-order-report-grid').tGrid({ columns: [{ "title": "Item", "member": "Item", "type": "String" }, { "title": "Total", "member": "Total", "type": "String" }, { "title": "Count", "member": "Count", "type": "Number"}], pageSize: 0, ajax: { "selectUrl": "/Admin/Order/OrderIncompleteReportList?incomplete-order-report-grid-size=0" }, noRecordsTemplate: 'No records to display.' });
+        jQuery('#registered-customers-grid').tGrid({ columns: [{ "title": "Period", "member": "Period", "type": "String" }, { "title": "Count", "member": "Customers", "type": "Number"}], pageSize: 0, ajax: { "selectUrl": "/Admin/Customer/ReportRegisteredCustomersList?registered-customers-grid-size=0" }, noRecordsTemplate: 'No records to display.' });
+        jQuery('#bestsellers-byquantity-grid').tGrid({ columns: [{ "title": "Name", "member": "ProductVariantFullName", "type": "String" }, { "title": "Total quantity", "member": "TotalQuantity", "type": "Number" }, { "title": "Total amount (excl tax)", "member": "TotalAmount", "type": "String" }, { "attr": " align=\"center\"", "title": "View", "template": "\u003ca href=\"/Admin/ProductVariant/Edit/\u003c#= ProductVariantId #\u003e\"\u003eView\u003c/a\u003e", "member": "ProductVariantId", "type": "Number"}], pageSize: 5, total: 0, currentPage: 1, pageSizesInDropDown: ["5", "10", "20", "50"], pageOnScroll: false, ajax: { "selectUrl": "/Admin/Order/BestsellersBriefReportByQuantityList?bestsellers-byquantity-grid-size=5" }, noRecordsTemplate: 'No records to display.' });
+        jQuery('#bestsellers-byamount-grid').tGrid({ columns: [{ "title": "Name", "member": "ProductVariantFullName", "type": "String" }, { "title": "Total quantity", "member": "TotalQuantity", "type": "Number" }, { "title": "Total amount (excl tax)", "member": "TotalAmount", "type": "String" }, { "attr": " align=\"center\"", "title": "View", "template": "\u003ca href=\"/Admin/ProductVariant/Edit/\u003c#= ProductVariantId #\u003e\"\u003eView\u003c/a\u003e", "member": "ProductVariantId", "type": "Number"}], pageSize: 5, total: 0, currentPage: 1, pageSizesInDropDown: ["5", "10", "20", "50"], pageOnScroll: false, ajax: { "selectUrl": "/Admin/Order/BestsellersBriefReportByAmountList?bestsellers-byamount-grid-size=5" }, noRecordsTemplate: 'No records to display.' });
+        jQuery('#Admin').tMenu();
+    });
+//]]>
+</script>
+    
+
+</form>
+</body>
+</html>

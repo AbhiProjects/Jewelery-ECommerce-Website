@@ -1,0 +1,73 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="FrontEndMaster.master.cs" Inherits="FrontEndMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head id="Head1" runat="server">
+<meta charset="utf-8" />
+<asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="Images/Banner/style.css" />
+<link type="text/css" rel="stylesheet" media="all" href="sites/all/themes/max/stylesfbad.css" />
+<script type="text/javascript" src="/sites/all/modules/colorbox/styles/default/colorbox_default_stylefbad.js?z"></script>
+<script type="text/javascript" src="Images/Banner/jquery.minfbad.js?z"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".msg_body").hide();
+        $(".msg_head").click(function () {
+            $(this).next(".msg_body").slideToggle(600);
+            $(".msg_body").hide();
+        });
+    });
+</script>
+<script type="text/javascript">
+
+    jQuery.extend(Drupal.settings, { "basePath": "/", "colorbox": { "transition": "elastic", "speed": 350, "opacity": "0.85", "slideshow": false, "slideshowAuto": false, "slideshowSpeed": 2500, "slideshowStart": "", "slideshowStop": "", "current": "{current} of {total}", "previous": "« Prev", "next": "Next »", "close": "Close", "overlayClose": true, "maxWidth": "100%", "maxHeight": "100%" }, "cron": { "basePath": "/poormanscron", "runNext": 1372087483 }, "thickbox": { "close": "Close", "next": "Next \x3e", "prev": "\x3c Prev", "esc_key": "or Esc Key", "next_close": "Next / Close on last", "image_count": "Image !current of !total"} });
+</script>
+</head>
+
+<body>
+<form id="f1" runat="server">
+
+<div class="header_warpper" id=ulHeader runat="server">
+
+</div>
+
+<%--<div class="banner_warpper"><div id="warpper">
+<div class="banner">
+<!-- Start WOWSlider.com BODY section -->
+	<div id="wowslider-container1">
+	<div class="ws_images"><ul runat="server" id="ulBanner">
+</ul></div>
+<div class="ws_bullets"><div>
+</div></div>
+</div>
+	<script type="text/javascript" src="Images/Banner/wowslider.js"></script>
+	<script type="text/javascript" src="Images/Banner/script.js"></script>
+	<!-- End WOWSlider.com BODY section -->
+</div>
+</div></div>--%>
+<div class="container2_warpper"><div id="warpper">
+        
+<asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        
+    
+        </asp:ContentPlaceHolder>
+         
+</div></div>
+<div class="clear" style=" background-image:url(Images/Static/body.gif); border-bottom:2px solid #244962"></div>
+<div class="footer_warpper"><div id="warpper"><div id="footer">
+    <!-- ################################################################################################ -->
+    <div class="pad" id="ulfooter" runat="server">
+      <!-- ################################################################################################ -->
+
+    </div>
+    <!-- ################################################################################################ -->
+  </div></div></div>
+  </form>
+</body>
+</html>
